@@ -14,6 +14,6 @@ extern "C" void __cdecl haha_no_int_main_needed(void) {
 
 #ifdef _DEBUG
 int main() {
-    haha_no_int_main_needed()'
+    haha_no_int_main_needed();
 }
 #else
