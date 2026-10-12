@@ -2,6 +2,17 @@
 
 PUBLIC GetStdOut
 PUBLIC NtWriteFile
+
+GetPEB PROC
+	mov rax, gs:[60h]
+	ret
+GetPEB ENDP
+
+GetUserProcessParameters PROC
+	mov rax, gs:[60h]
+	mov rax, [rax+20h]
+	ret
+GetUserProcessParameters ENDP
 	
 GetStdOut PROC
 	mov rax, gs:[60h]
